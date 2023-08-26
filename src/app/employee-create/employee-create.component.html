@@ -1,0 +1,61 @@
+<!-- <form (ngSubimit) = "newEmployee()" [formGroup]> -->
+    <form [formGroup]="formNewEmployee" (ngSubmit)="sendNewEmployee()">
+      <div class="row">
+          <div class="col-3">
+          <label for="formGroupExampleInput" >Nome</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Digite aqui o seu Primeiro nome" formControlName="nome">
+        </div></div>
+        <div class="col-8">
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Sobrenome</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Digite aqui o seu Sobrenome" formControlName="sobrenome">
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Idade</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Digite aqui a sua Idade" formControlName="idade" min="18">
+          </div>
+        </div>
+
+
+        <div class="col-3">
+            <label for="formGroupExampleInput2">Cor de cabelo</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Cor do cabelo" formControlName="corCabelo">
+          </div>
+
+          <!-- <div class="col-3">
+            <label for="formGroupExampleInput2">Genero</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Genero" formControlName="genero">
+          </div> -->
+          <div class="form-group col-md-4">
+            <label for="inputState">Genero</label>
+            <select id="inputState" class="form-control" formControlName="genero">
+              <option selected>Selecione um Genero</option>
+              <option value="male">Male</option>
+              <option value="famale">Female</option>
+            </select>
+          </div>
+
+          <div class="col-3">
+            <label for="formGroupExampleInput2">Telefone</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="(xx-xxxx-xxxx)" formControlName="telefone" minLength="11" maxlength="11">
+          </div>
+
+          <div class="col-8">
+            <label for="formGroupExampleInput2">Endereco</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Digite aqui o seu endereço" formControlName="endereco">
+          </div>
+
+          <div class="col-3">
+            <label for="formGroupExampleInput2">Salário</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input" formControlName="salario" min="1330">
+          </div>
+
+          <div class="col-5">
+            <label for="formGroupExampleInput2">Foto</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Link da foto" formControlName="foto">
+          </div>
+
+          <button type="submit" [disabled]="formNewEmployee.invalid"  class="btn btn-dark">Cadastrar</button>
+      </form>

@@ -1,0 +1,28 @@
+<table class="table table-striped mt-3">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Sobrenome</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Endereço</th>
+      <th scope="col">Salário</th>
+      <th scope="col">Cor Cabelo</th>
+      <th scope="col">Idade</th>
+      <th scope="col">Genero</th>
+      <th scope="col">Foto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employees of listEmployee$ | async">
+      <th scope="row">{{ employees.nome}}</th>
+      <td>{{ employees.sobrenome }}</td>
+      <td>{{ employees.telefone }}</td>
+      <td>{{ employees.endereco}}</td>
+      <td>{{ employees.salario}}</td>
+      <td>{{employees.corCabelo}}</td>
+      <td>{{employees.idade}}</td>
+      <td>{{employees.genero}}</td>
+      <img [src]="employees.foto" alt="" srcset="">
+    </tr>
+  </tbody>
+</table>
